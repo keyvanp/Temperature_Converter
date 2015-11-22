@@ -13,7 +13,7 @@ void main(List<String> arguments) {
             temp = double.parse(stdin.readLineSync());
             noError = true;
         } on FormatException catch (e) {
-            stdout.writeln("The entered input is not a temperature.");
+            stdout.writeln("The entered input (${e.source}), is not a temperature.");
         }
         if (noError) {
             if (tempType == "c" || tempType == "C") {
